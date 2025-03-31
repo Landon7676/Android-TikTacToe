@@ -28,6 +28,7 @@ class BottomFragment : Fragment(R.layout.fragment_bottom) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Initialize board
         board = Array(3) { row ->
             Array(3) { col ->
                 val buttonId = resources.getIdentifier("button_${row}_${col}", "id", requireContext().packageName)
@@ -47,6 +48,7 @@ class BottomFragment : Fragment(R.layout.fragment_bottom) {
             restoreBoard()
         }
     }
+    //Restore boardState if orientation changes
     private fun restoreBoard() {
         for (row in 0..2) {
             for (col in 0..2) {

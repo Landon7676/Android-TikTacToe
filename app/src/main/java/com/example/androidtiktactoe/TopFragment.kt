@@ -31,6 +31,7 @@ class TopFragment : Fragment(R.layout.fragment_top) {
         val statusTextView = view?.findViewById<TextView>(R.id.status_text)
         outState.putString("statusText", statusTextView?.text.toString())
     }
+    //Change turn
     fun updateTurn(player: String) {
         statusTextView.text = "Player $player's Turn"
     }
